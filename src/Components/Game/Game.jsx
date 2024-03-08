@@ -1,7 +1,10 @@
 import React from 'react'
 import './Game.css'
-export const Game = () => {
+export const Game = ({verifyLetter}) => {
   return (
-    <div>Game</div>
+    <div>
+        <h2 className='title'>Game</h2>
+        <button onClick = {verifyLetter}> Game over</button>
+        </div>
   )
 }

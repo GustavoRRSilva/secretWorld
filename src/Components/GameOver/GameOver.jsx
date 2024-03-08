@@ -1,7 +1,10 @@
-import React from 'react'
-import './GameOver.css'
-export const GameOver = () => {
+import React from "react";
+import "./GameOver.css";
+export const GameOver = ({ retry }) => {
   return (
-    <div>GameOver</div>
-  )
-}
+    <div>
+      <h2 className="title">Game over</h2>
+      <button onClick={retry}>Retry game</button>
+    </div>
+  );
+};
