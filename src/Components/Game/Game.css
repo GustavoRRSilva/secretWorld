@@ -12,6 +12,11 @@
     display: flex;
 }
 
+.numberTips{
+    color: yellow;
+    font-weight: bold;
+}
+
 .Name .wordContainer span{
     display: block;
     font-size: 4em;
@@ -22,6 +27,7 @@
     text-align: center;
     height: 100px;
     line-height: 1.5;
+    font-weight: bold;
 }
 
 .Name h3 span{
