@@ -28,7 +28,7 @@ export const Game = ({
         Dica sobre a palavra: <span>{category}</span>
       </h3>
       <p>
-        Você ainda tem <span className="numberTips">{}</span> tentativa(s)
+        Você ainda tem <span className="numberTips">{guesses}</span> tentativa(s)
       </p>
       <div className="wordContainer">
         {letters.map((l, i) =>
