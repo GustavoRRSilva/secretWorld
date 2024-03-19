@@ -1,3 +1,5 @@
+![Imagem do site](https://github.com/GustavoRRSilva/secretWorld/assets/108638526/6b12c8b3-4088-4034-acc0-bb6f93a269bb)
+
 # 🖥 Funcionalidades 
 - `Funcionalidade 1:` `Pontuação`:Mostra a pontuação atual do jogador.;
 - `Funcionalidade 2:` `Dica sobre a palavra`:Fornece uma dica sobre a categoria da palavra que o jogador está tentando adivinhar;
