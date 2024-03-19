@@ -59,7 +59,25 @@ function App({}) {
   };
   // process the letter input
   const verifyLetter = (letter) => {
-    console.log(letter)
+    console.log(letter);
+    if (guessedLetters.includes(letter) || wrongLetters.includes(letter)) {
+      return;
+    }
+    //Guessed letter
+    if(letters.includes(letter)){
+      setGuessedLetters((actualGuessedLetters)=> [
+        ...actualGuessedLetters,
+        letter
+      ])
+    //wrong letter
+    }else{
+      setWrongLetters((actualWrongLetters)=>[
+        ...actualWrongLetters,
+        letter
+      ])
+    }
+    
+
   };
   //retry the game
   const retry = () => {
