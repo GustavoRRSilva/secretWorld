@@ -8,7 +8,16 @@ export const Game = ({
   wrongLetters,
   score,
   guesses,
+  verifyLetter,
 }) => {
+  const [letter, setLetter] = useState("");
+  const letterInputRef = useRef(null);
+  const handleLetter = (e) => {
+    e.preventDefault();
+    verifyLetter(letter);
+    setLetter("");
+    letterInputRef.current.focus();
+  };
   return (
     <div className="Name">
       <p className="points">
@@ -24,7 +33,9 @@ export const Game = ({
       <div className="wordContainer">
         {letters.map((l, i) =>
           guessedLetters.includes(l) ? (
-            <span className="letter" key={i}>{l}</span>
+            <span className="letter" key={i}>
+              {l}
+            </span>
           ) : (
             <span className="blank" key={i}></span>
           )
@@ -32,14 +43,21 @@ export const Game = ({
       </div>
       <div className="letterContainer">
         <p>Tente adivinhar uma letra da palavra:</p>
-        <form>
-          <input type="text" />
+        <form onSubmit={handleLetter}>
+          <input
+            type="text"
+            onChange={(e) => setLetter(e.target.value)}
+            ref={letterInputRef}
+            value={letter}
+          />
           <button>Jogar</button>
         </form>
       </div>
       <div className="wrongLettersContainer">
         <p>Letras já utilizadas:</p>
-        {wrongLetters.map((l,i)=><span key = {i}>{l},</span>)}
+        {wrongLetters.map((l, i) => (
+          <span key={i}>{l},</span>
+        ))}
       </div>
     </div>
   );
